@@ -33,7 +33,7 @@ Config.VehicleCanTrail = {
     {name = 'EVERON',       class = {8}},
     {name = 'TITAN',        class = {8}},
     {name = 'SANDKING',     class = {8}},
-    {name = 'SANDKIN2',     class = {8}},
+    {name = 'SANDKING2',     class = {8}},
     {name = 'DUBSTA3',      class = {8}},
     {name = 'BOBCATXL',     class = {8}},
     {name = 'BOATTRAILER',  class = {14}},
