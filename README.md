@@ -23,7 +23,7 @@ Simple quality of life update for az_trailer
 
 * QB-Target
 
-* QB-Menu
+* QB-Menu or ox_lib (for ox context menu)
 
 * Tested with lj-inventory / qb-inventory
 
