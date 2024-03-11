@@ -62,10 +62,8 @@ AddEventHandler('az-trailer:return', function()
 end)
 
 AddEventHandler('az-trailer:spawncar', function(model)
-    local success = lib.callback.await('az_trailer:server:attemptRental', false, model)
-    if not success then
-        QBCore.Functions.Notify('You do not have a current rental out.', 'error')
-    end
+    if not model then return end
+    lib.callback.await('az_trailer:server:attemptRental', false, model)
 end)
 
 AddEventHandler('az-trailer:openMenu', function()
