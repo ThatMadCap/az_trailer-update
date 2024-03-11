@@ -26,6 +26,7 @@ lib.callback.register('az_trailer:server:attemptRental', function(source, model)
     local balance = Player.PlayerData.money.cash
     if Server.Rentals[model] and balance >= Server.Rentals[model].price then
         Player.Functions.RemoveMoney('cash', Server.Rentals[model].price, 'Trailer Rental')
+        QBCore.Functions.Notify(source, ('You paid $%s for a rental.'):format(Server.Rentals[model].price), 'success')
         local coords = Server.Rentals[model].spawn or vec4(-49.96, -1692.76, 29.49, 287.79)
         local vehicle = createTrailer(src, model, coords)
         cachePlayers[src] = {}
