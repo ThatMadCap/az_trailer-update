@@ -26,18 +26,6 @@ CreateNPC = function()
     SetEntityInvincible(created_ped, true)
     SetBlockingOfNonTemporaryEvents(created_ped, true)
     TaskStartScenarioInPlace(created_ped, Config.PedScenario, 0, true)
-    exports['qb-target']:AddTargetEntity(created_ped, {
-        options = {
-            {
-                icon = 'fa-solid fa-circle',
-                label = 'Trailers',
-                action = function(entity)
-                    TriggerEvent('az-trailer:openMenu')
-                end,
-            },
-        },
-        distance = 1.5,
-    })
 end
 
 function GetVehicleInDirection(cFrom, cTo)
@@ -91,6 +79,13 @@ AddEventHandler('az-trailer:openMenu', function()
                     TriggerEvent('az-trailer:spawncar', 'boattrailer')
                 end,
               },
+              {
+                title = 'Rent Large Track Trailer',
+                description = ('$%s deposit'):format(Config.TracktrailerPrice),
+                onSelect = function()
+                    TriggerEvent('az-trailer:spawncar', 'tr2')
+                end,
+              },
             },
           })
         lib.showContext('rental_trailers')
@@ -124,6 +119,15 @@ AddEventHandler('az-trailer:openMenu', function()
                 params = {
                     event = 'az-trailer:spawncar',
                     args = 'boattrailer',
+                }
+            },
+            {
+                id = 4,
+                header = 'Rent Large Track Trailer',
+                txt = ('$%s deposit'):format(Config.TracktrailerPrice),
+                params = {
+                    event = 'az-trailer:spawncar',
+                    args = 'tr2',
                 }
             },
         })
@@ -294,4 +298,5 @@ RegisterNetEvent('az_trailer:cacheConfig', function(data)
     Config.RefundPrice = data.RefundPrice
     Config.TrailersmallPrice = data.Rentals['trailersmall'].price
     Config.BoattrailerPrice = data.Rentals['boattrailer'].price
+    Config.TracktrailerPrice = data.Rentals['tr2'].price
 end)

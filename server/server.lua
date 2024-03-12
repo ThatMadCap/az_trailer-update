@@ -4,6 +4,7 @@ local Server = {
     Rentals = {
         trailersmall = {price = 250, spawn = vec4(-48.56, -1692.29, 30, 280)},
         boattrailer = {price = 250, spawn = vec4(-57.40, -1685.42, 29.49, 300)},
+        tr2 = {price = 500, spawn = vec4(-29.00, -1680.40, 29.45, 117.05)},
     },
 }
 

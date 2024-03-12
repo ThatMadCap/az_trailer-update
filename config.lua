@@ -1,7 +1,7 @@
 QBCore = exports['qb-core']:GetCoreObject()
 
 return {
-    Menu = 'ox', -- use 'ox' for ox_lib menu and 'qb' for qb-menu
+    Menu = 'qb', -- use 'ox' for ox_lib menu and 'qb' for qb-menu
     PedLocation = vec4(-58.62, -1691.88, 28.48, 300),
     PedModel = 'S_F_M_Autoshop_01',
     PedScenario = 'WORLD_HUMAN_STAND_IMPATIENT_UPRIGHT_FACILITY',
@@ -16,7 +16,7 @@ return {
         {name = 'EVERON',       class = {8}},
         {name = 'TITAN',        class = {8}},
         {name = 'SANDKING',     class = {8}},
-        {name = 'SANDKING2',     class = {8}},
+        {name = 'SANDKING2',    class = {8}},
         {name = 'DUBSTA3',      class = {8}},
         {name = 'BOBCATXL',     class = {8}},
         {name = 'BOATTRAILER',  class = {14}},
@@ -24,20 +24,19 @@ return {
         {name = 'TRAILER',      class = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20}}
     },
     Lang = {
-        ["TrailerNotFound"] =    'Trailer not found',
-        ["RampAlreadySet"] =   'A ramp is already attached',
+        ["TrailerNotFound"] =   'Trailer not found',
+        ["RampAlreadySet"] =    'A ramp is already attached',
         ["NoVehicleSet"] =      'No vehicle attached found',
         ["CantSetThisType"] =   'You cannot attach this type of vehicle to this trailer',
         ["NotInVehicle"] =      'You are not in a vehicle',
     },
     Command = {
-        ["attachtrailer"] = "attach",
-        ["detachtrailer"] = "detach",
-
+        ["attachtrailer"] = 'attach',
+        ["detachtrailer"] = 'detach',
         -- TR2 TRAILER
-        ["openramptr2"] = "openramptr2",
-        ["opentrunktr2"] = "opentrunktr2",
-        ["closeramptr2"] = "closeramptr2",
-        ["closetrunktr2"] = "closetrunktr2",
+        ["openramptr2"] =   'openramptr2',
+        ["opentrunktr2"] =  'opentrunktr2',
+        ["closeramptr2"] =  'closeramptr2',
+        ["closetrunktr2"] = 'closetrunktr2',
     },
 }
