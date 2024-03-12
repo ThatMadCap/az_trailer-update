@@ -15,8 +15,6 @@ Simple quality of life update for az_trailer
 
 * Updated locale
 
-* TO-DO: Add 'tr2' trailer
-
 # Dependencies
 
 * QB-Core
