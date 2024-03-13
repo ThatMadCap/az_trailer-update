@@ -2,7 +2,7 @@ fx_version 'adamant'
 games { 'gta5' }
 
 description 'Az_trailer by Azeroth - edited by MadCap'
-version '3.1'
+version '3.0.2'
 
 shared_scripts {
     '@ox_lib/init.lua',
