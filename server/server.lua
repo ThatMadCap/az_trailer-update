@@ -66,8 +66,9 @@ AddEventHandler('onResourceStart', function(resource)
 end)
 
 RegisterNetEvent('QBCore:Server:OnPlayerLoaded', function()
+    local src = source
     SetTimeout(2000, function()
-        TriggerClientEvent('az_trailer:cacheConfig', source, Server)
+        TriggerClientEvent('az_trailer:cacheConfig', src, Server)
     end)
 end)
 
